@@ -14,7 +14,7 @@ The notebook covers data sampling, class-count balancing, contrast enhancement, 
 
    The second one gave the final set: 2,282 images with a much flatter count distribution.
 4. **Contrast enhancement:** CLAHE (clip limit 2.0, 8x8 tiles), plus a pixel-intensity check that compares person regions (from the boxes) with the background.
-5. **Augmentation:** Albumentations (brightness and contrast, blur, gamma, CLAHE, flip). One augmented copy is kept for each image.
+5. **Augmentation:** photometric Albumentations transforms (brightness and contrast, blur, gamma, CLAHE, hue/saturation). They change pixel values but not positions, so the existing box labels stay correct. One augmented copy is kept for each image.
 6. **Export:** image and label pairs are uploaded to Roboflow and exported in COCO format, ready for detector training.
 
 | Random sample | After balancing |
