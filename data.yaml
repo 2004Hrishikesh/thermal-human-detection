@@ -1,0 +1,14 @@
+# Path to training images directory
+train: dataset/images/train
+
+# Path to validation images directory
+val: dataset/images/val
+
+# Optional: path to test images
+test: dataset/images/test
+
+# Number of classes
+nc: 1
+
+# Class names
+names: ['person']
